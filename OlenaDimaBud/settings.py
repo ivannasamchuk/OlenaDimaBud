@@ -1,6 +1,6 @@
 SECRET_KEY = 'fake-key'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = ['django.contrib.staticfiles']
 MIDDLEWARE = []
 ROOT_URLCONF = 'OlenaDimaBud.urls'
@@ -14,4 +14,7 @@ TEMPLATES = [
 ]
 WSGI_APPLICATION = 'OlenaDimaBud.wsgi.application'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['static']
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
