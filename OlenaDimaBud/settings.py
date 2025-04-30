@@ -22,3 +22,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 import os
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
