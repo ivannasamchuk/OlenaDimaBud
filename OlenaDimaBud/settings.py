@@ -1,6 +1,7 @@
-SECRET_KEY = 'fake-key'
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+import os
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "секрет_для_локального_запуску")
+DEBUG = False
+ALLOWED_HOSTS = ['.onrender.com']
 INSTALLED_APPS = ['django.contrib.staticfiles']
 MIDDLEWARE = []
 ROOT_URLCONF = 'OlenaDimaBud.urls'
