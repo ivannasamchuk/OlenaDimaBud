@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+import os
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "секрет_для_локального_запуску")
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['.onrender.com']
 INSTALLED_APPS = ['django.contrib.staticfiles']
 MIDDLEWARE = []
